@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Editor from '../editor';
 import Preview from '../preview';
+import Buttons from '../buttons';
 
 export default class App extends Component {
   constructor(){
@@ -35,6 +36,7 @@ export default class App extends Component {
           enterInformationForBanner={this.enterInformationForBanner}
         />
         <Preview banner={banner}/>
+        <Buttons banner={this.state}/>
       </div>
     );
   }
