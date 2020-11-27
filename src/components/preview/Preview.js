@@ -1,25 +1,35 @@
 import React from 'react';
 
+function backgroundValue(banner) {
+  if(banner.image) {
+    return(`url("${banner.image}") no-repeat`);
+  } else if (banner.topColorGradient && banner.bottomColorGradient) {
+    return(`linear-gradient(${banner.topColorGradient}, ${banner.bottomColorGradient})`);
+  } else {
+    return(banner.color);
+  }
+}
+
 const Preview = ({banner}) => {
   const divStyle = {
-    color: 'blue',
-    backgroundImage: 'url(' + banner + ')',
-    backgroundColor: 'blue',
+    background: backgroundValue(banner),
     position: 'relative',
-    background: `linear-gradient( ${banner.topColorGradient}, ${banner.bottomColorGradient})`,
     width: 350,
     height: 250,
-  };
+    display: 'inline-block'
+  }
+
   const textStyle = {
     position: 'absolute',
     left: 20,
     bottom: 5,
     margin: 0,
-    color: banner.color,
+    color: 'black'
   }
+
   return(
     <React.Fragment>
-      <a href={banner.url}>
+      <a href={banner.url} target="_blank" rel="noreferrer">
         <div style={divStyle}>
           <div style={textStyle}>
             <p>{banner.line1}</p>

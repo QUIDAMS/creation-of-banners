@@ -23,19 +23,22 @@ const Editor = ({banner, enterInformationForBanner}) => {
          value={banner.line3}
          onChange={e => enterInformationForBanner(e, 'line3')}/>
      </li>
-     <li>Цвет текста
+     <li>Цвет фона
        <input
          value={banner.color}
-         onChange={e => enterInformationForBanner(e, 'line3')}/>
+         type="color"
+         onChange={e => enterInformationForBanner(e, 'color')}/>
      </li>
      <li>Градиент цвет 1
        <input
          value={banner.topColorGradient}
+         type="color"
          onChange={e => enterInformationForBanner(e, 'topColorGradient')}/>
      </li>
      <li>Градиент цвет 2
        <input
          value={banner.bottomColorGradient}
+         type="color"
          onChange={e => enterInformationForBanner(e, 'bottomColorGradient')}/>
      </li>
      <li>Ссылка
