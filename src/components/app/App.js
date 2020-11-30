@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Editor from '../editor';
 import Preview from '../preview';
 import Buttons from '../buttons';
+import ReactDOMServer from 'react-dom/server';
+
 
 export default class App extends Component {
   constructor(){
@@ -9,7 +11,7 @@ export default class App extends Component {
     this.state = {
       banner: {
         image: 'https://i.ibb.co/QQxXbY1/BF69285-E-8203-4-E8-C-8251-D744-BDF7-ECD3.png',
-        line1: 'Строка окушпоукопуп пушощшцоугазшгцуазц цу аопу цашуцзгазщуцг ацзуагзщцгуза гцаг цазщгцузгацщ ахцащ1',
+        line1: 'Строка ',
         line2: 'line2',
         line3: 'line3',
         color: '#4c0a28',
@@ -31,6 +33,8 @@ export default class App extends Component {
 
   render() {
     const {banner} = this.state;
+    const htmlString = ReactDOMServer.renderToString(<Preview banner={banner} ref={this.previewRef}/>)
+
     return (
       <div>
         <Editor
@@ -38,7 +42,7 @@ export default class App extends Component {
           enterInformationForBanner={this.enterInformationForBanner}
         />
         <Preview banner={banner} ref={this.previewRef}/>
-        <Buttons banner={this.state} previewRef={this.previewRef}/>
+        <Buttons banner={this.state} previewRef={this.previewRef} htmlString={htmlString}/>
       </div>
     );
   }
