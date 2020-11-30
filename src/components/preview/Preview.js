@@ -10,7 +10,7 @@ function backgroundValue(banner) {
   }
 }
 
-const Preview = ({banner}) => {
+const Preview = React.forwardRef(({banner}, ref) => {
   const divStyle = {
     background: backgroundValue(banner),
     position: 'relative',
@@ -30,7 +30,7 @@ const Preview = ({banner}) => {
   return(
     <React.Fragment>
       <a href={banner.url} target="_blank" rel="noreferrer">
-        <div style={divStyle}>
+        <div style={divStyle} ref={ref}>
           <div style={textStyle}>
             <p>{banner.line1}</p>
             <p>{banner.line2}</p>
@@ -40,6 +40,6 @@ const Preview = ({banner}) => {
       </a>
     </React.Fragment>
   );
-}
+});
 
 export default Preview;

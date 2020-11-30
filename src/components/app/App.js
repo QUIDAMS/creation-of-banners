@@ -19,6 +19,7 @@ export default class App extends Component {
       }
     }
     this.enterInformationForBanner = this.enterInformationForBanner.bind(this);
+    this.previewRef = React.createRef();
   }
 
   enterInformationForBanner(e, field){
@@ -36,8 +37,8 @@ export default class App extends Component {
           banner={banner}
           enterInformationForBanner={this.enterInformationForBanner}
         />
-        <Preview banner={banner}/>
-        <Buttons banner={this.state}/>
+        <Preview banner={banner} ref={this.previewRef}/>
+        <Buttons banner={this.state} previewRef={this.previewRef}/>
       </div>
     );
   }
