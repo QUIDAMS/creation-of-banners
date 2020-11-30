@@ -47,7 +47,6 @@ const Editor = ({banner, enterInformationForBanner}) => {
          onChange={e => enterInformationForBanner(e, 'url')}/>
      </li>
    </ul>
-
   )
 }
 

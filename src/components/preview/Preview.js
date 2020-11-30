@@ -39,7 +39,7 @@ const Preview = ({banner}) => {
         </div>
       </a>
     </React.Fragment>
-  )
+  );
 }
 
 export default Preview;

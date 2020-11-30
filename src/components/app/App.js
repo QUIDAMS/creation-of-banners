@@ -20,6 +20,7 @@ export default class App extends Component {
     }
     this.enterInformationForBanner = this.enterInformationForBanner.bind(this);
   }
+
   enterInformationForBanner(e, field){
     console.log(this.state.banner);
     let copyBanner = this.state.banner;
