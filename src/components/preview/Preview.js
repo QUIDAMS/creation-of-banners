@@ -3,10 +3,10 @@ import React from 'react';
 function backgroundValue(banner) {
   if(banner.image) {
     return(`url("${banner.image}") no-repeat`);
-  } else if (banner.topColorGradient && banner.bottomColorGradient) {
-    return(`linear-gradient(${banner.topColorGradient}, ${banner.bottomColorGradient})`);
-  } else {
+  } else if (banner.color){
     return(banner.color);
+  } else {
+    return(`linear-gradient(${banner.topColorGradient}, ${banner.bottomColorGradient})`);
   }
 }
 
@@ -28,17 +28,21 @@ const Preview = React.forwardRef(({banner}, ref) => {
   }
 
   return(
-    <React.Fragment>
-      <a href={banner.url} target="_blank" rel="noreferrer">
+    <div className='preview'>
+      <a
+        href={banner.url}
+        target='_blank'
+        rel='noreferrer'
+      >
         <div style={divStyle} ref={ref}>
           <div style={textStyle}>
-            <p>{banner.line1}</p>
-            <p>{banner.line2}</p>
-            <p>{banner.line3}</p>
+            <p className='preview__text-line'>{banner.line1}</p>
+            <p className='preview__text-line'>{banner.line2}</p>
+            <p className='preview__text-line'>{banner.line3}</p>
           </div>
         </div>
       </a>
-    </React.Fragment>
+    </div>
   );
 });
 

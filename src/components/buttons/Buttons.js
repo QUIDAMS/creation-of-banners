@@ -8,17 +8,16 @@ function copyAsJSX(htmlString) {
   navigator.clipboard.writeText(htmlString);
 }
 
-
 const Buttons = ({banner, previewRef, htmlString}) => {
   return(
-    <div>
-      <button onClick={() => copyAsJSX(htmlString)}>
+    <div className='buttons'>
+      <button className='buttons__copy' onClick={() => copyAsJSX(htmlString)}>
         Скопировать баннер в буфер обмена, как html
       </button>
-      <button onClick={() => exportComponentAsPNG(previewRef)}>
+      <button className='buttons__copy' onClick={() => exportComponentAsPNG(previewRef)}>
         Сохранить картинку в png
       </button>
-      <button onClick={() => copyAsJSON(banner)}>
+      <button className='buttons__copy' onClick={() => copyAsJSON(banner)}>
         Скопировать баннер как JSON
       </button>
     </div>

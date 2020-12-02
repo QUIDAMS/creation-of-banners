@@ -1,0 +1,38 @@
+.editor {
+  float: left;
+
+  &__list {
+    text-align: right;
+    margin: 30px;
+  }
+  &__item {
+    margin-bottom: 8px;
+    list-style: none;
+  }
+  &__label {
+    float: left;
+    padding-right: 20px;
+  }
+}
+
+.preview {
+  float: left;
+  margin: 30px;
+  overflow: hidden;
+
+  &__text-line {
+    white-space: nowrap;
+  }
+}
+
+.buttons {
+  clear: left;
+  margin: 0;
+  
+  &__copy {
+    margin: 20px;
+    height: 60px;
+    width: 170px;
+  }
+
+}

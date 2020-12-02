@@ -4,6 +4,8 @@ import Preview from '../preview';
 import Buttons from '../buttons';
 import ReactDOMServer from 'react-dom/server';
 
+import './app.scss';
+
 
 export default class App extends Component {
   constructor(){
@@ -33,16 +35,24 @@ export default class App extends Component {
 
   render() {
     const {banner} = this.state;
-    const htmlString = ReactDOMServer.renderToString(<Preview banner={banner} ref={this.previewRef}/>)
-
+    const htmlString = ReactDOMServer.renderToString(
+      <Preview banner={banner} ref={this.previewRef}/>
+    )
     return (
       <div>
         <Editor
           banner={banner}
           enterInformationForBanner={this.enterInformationForBanner}
         />
-        <Preview banner={banner} ref={this.previewRef}/>
-        <Buttons banner={this.state} previewRef={this.previewRef} htmlString={htmlString}/>
+        <Preview
+          banner={banner}
+          ref={this.previewRef}
+        />
+        <Buttons
+          banner={this.state}
+          previewRef={this.previewRef}
+          htmlString={htmlString}
+        />
       </div>
     );
   }
