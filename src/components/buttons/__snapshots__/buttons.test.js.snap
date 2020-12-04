@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Buttons render correctly correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="buttons__copy"
+    onClick={[Function]}
+  >
+    Скопировать баннер в буфер обмена, как html
+  </button>
+  <button
+    className="buttons__copy"
+    onClick={[Function]}
+  >
+    Сохранить картинку в png
+  </button>
+  <button
+    className="buttons__copy"
+    onClick={[Function]}
+  >
+    Скопировать баннер как JSON
+  </button>
+</div>
+`;

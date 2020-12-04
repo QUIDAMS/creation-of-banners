@@ -1,9 +1,11 @@
 import React from 'react';
 import {exportComponentAsPNG} from 'react-component-export-image';
+import PropTypes from 'prop-types';
 
 function copyAsJSON(banner) {
   navigator.clipboard.writeText(JSON.stringify(banner));
 }
+
 function copyAsJSX(htmlString) {
   navigator.clipboard.writeText(htmlString);
 }
@@ -22,6 +24,12 @@ const Buttons = ({banner, previewRef, htmlString}) => {
       </button>
     </div>
   )
+}
+
+Buttons.propTypes = {
+  previewRef: PropTypes.object,
+  banner: PropTypes.object,
+  htmlString: PropTypes.string,
 }
 
 export default Buttons;

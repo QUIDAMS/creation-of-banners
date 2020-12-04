@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Editor rendered correctly 1`] = `
+<div
+  className="editor"
+>
+  <div
+    className="editor__list"
+  >
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+        id="1"
+      >
+        Иллюстрация
+      </label>
+      <input
+        name="1"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Строка 1
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Строка 2
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Строка 3
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Ссылка
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Цвет фона
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Градиент цвет 1
+      </label>
+      <input
+        onChange={[Function]}
+        type="color"
+      />
+    </div>
+    <div
+      className="editor__item"
+    >
+      <label
+        className="editor__label"
+      >
+        Градиент цвет 2
+      </label>
+      <input
+        onChange={[Function]}
+        type="color"
+      />
+    </div>
+  </div>
+</div>
+`;

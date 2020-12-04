@@ -1,5 +1,12 @@
+.header {
+  width: 610px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+}
 .editor {
   float: left;
+  margin: 0;
 
   &__list {
     text-align: right;
@@ -28,11 +35,10 @@
 .buttons {
   clear: left;
   margin: 0;
-  
+
   &__copy {
     margin: 20px;
     height: 60px;
     width: 170px;
   }
-
 }

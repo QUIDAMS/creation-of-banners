@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Preview render correctly correctly 1`] = `
+<div
+  className="preview"
+>
+  <a
+    rel="noreferrer"
+    target="_blank"
+  >
+    <div
+      style={
+        Object {
+          "background": "linear-gradient(undefined, undefined)",
+          "border": "1px solid black",
+          "display": "inline-block",
+          "fontSize": 35,
+          "fontWeight": "bold",
+          "height": 350,
+          "position": "relative",
+          "width": 250,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "bottom": 5,
+            "color": "black",
+            "left": 20,
+            "margin": 0,
+            "position": "absolute",
+          }
+        }
+      >
+        <p
+          className="preview__text-line"
+          style={
+            Object {
+              "margin": 2,
+            }
+          }
+        />
+        <p
+          className="preview__text-line"
+          style={
+            Object {
+              "margin": 2,
+            }
+          }
+        />
+        <p
+          className="preview__text-line"
+          style={
+            Object {
+              "margin": 2,
+            }
+          }
+        />
+      </div>
+    </div>
+  </a>
+</div>
+`;

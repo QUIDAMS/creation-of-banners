@@ -3,23 +3,23 @@ import Editor from '../editor';
 import Preview from '../preview';
 import Buttons from '../buttons';
 import ReactDOMServer from 'react-dom/server';
+import PropTypes from 'prop-types';
 
 import './app.scss';
-
 
 export default class App extends Component {
   constructor(){
     super();
     this.state = {
       banner: {
-        image: 'https://i.ibb.co/QQxXbY1/BF69285-E-8203-4-E8-C-8251-D744-BDF7-ECD3.png',
-        line1: 'Строка ',
-        line2: 'line2',
-        line3: 'line3',
-        color: '#4c0a28',
-        topColorGradient: '#e214c9',
-        bottomColorGradient: '#149fe2',
-        url: 'https://github.com/avito-tech/vas-frontend-trainee-assignment/blob/main/README.md',
+        image: '',
+        line1: '',
+        line2: '',
+        line3: '',
+        color: '',
+        topColorGradient: '',
+        bottomColorGradient: '',
+        url: '',
       }
     }
     this.enterInformationForBanner = this.enterInformationForBanner.bind(this);
@@ -40,6 +40,7 @@ export default class App extends Component {
     )
     return (
       <div>
+        <div className='header'>Создай свой баннер заполнив поля</div>
         <Editor
           banner={banner}
           enterInformationForBanner={this.enterInformationForBanner}
@@ -56,4 +57,16 @@ export default class App extends Component {
       </div>
     );
   }
+}
+
+Preview.propTypes = {
+  banner: PropTypes.object,
+  image: PropTypes.string,
+  line1: PropTypes.string,
+  line2: PropTypes.string,
+  line3: PropTypes.string,
+  color: PropTypes.string,
+  topColorGradient: PropTypes.string,
+  bottomColorGradient: PropTypes.string,
+  url: PropTypes.string,
 }

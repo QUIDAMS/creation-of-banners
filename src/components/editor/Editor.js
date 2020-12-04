@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Editor = ({banner, enterInformationForBanner}) => {
   return(
@@ -55,7 +56,12 @@ const Editor = ({banner, enterInformationForBanner}) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
+
+Editor.propTypes = {
+  banner: PropTypes.object,
+  enterInformationForBanner: PropTypes.func,
+};
 
 export default Editor;
